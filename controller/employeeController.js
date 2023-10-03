@@ -15,8 +15,10 @@ exports.add = async (req, res) => {
 
 
   exports.take = async (req, res) => {
+    console.log("hi");
     try {
       let data = await Employee.find();
+      console.log(data);
       res.send(data);
     } catch (err) {
       res.status(400).json(err.message);
