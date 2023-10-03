@@ -12,4 +12,14 @@ exports.add = async (req, res) => {
   } catch (err) {
     res.status(400).json(err.message);
   }
+
+
+  exports.take = async (req, res) => {
+    try {
+      let data = await Employee.find();
+      res.send(data);
+    } catch (err) {
+      res.status(400).json(err.message);
+    }
+  };
 };
