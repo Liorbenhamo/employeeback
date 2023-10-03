@@ -12,7 +12,7 @@ exports.add = async (req, res) => {
   } catch (err) {
     res.status(400).json(err.message);
   }
-
+};
 
   exports.take = async (req, res) => {
     console.log("hi");
@@ -24,4 +24,3 @@ exports.add = async (req, res) => {
       res.status(400).json(err.message);
     }
   };
-};
